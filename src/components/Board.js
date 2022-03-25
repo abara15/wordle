@@ -3,9 +3,7 @@ import { boardDefault } from '../constants/Words';
 import Letter from './Letter';
 
 function Board() {
-    // Initialize the board with its default state
-    const [board, setBoard] = useState(boardDefault);
-
+    
     return (
         <div className='board'>
             <div className='row'>

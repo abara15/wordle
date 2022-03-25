@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { AppContext } from '../App';
 
 function Letter({ position, attemptVal }) {
+    const { board } = useContext(AppContext);
+
+    const letter = board[attemptVal][position];
+    
     return (
-        <div>Letter</div>
+        <div className='letter'>{letter}</div>
     );
 }
 
