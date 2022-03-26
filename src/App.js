@@ -10,6 +10,8 @@ function App() {
     const [board, setBoard] = useState(boardDefault);
 	const [currAttempt, setCurrAttempt] = useState({attempt: 0, letterPos: 0});
 
+	const myWord = "IRATE";
+
 	const onSelectLetter = (keyVal) => {
 		const newBoard = [...board];
 		if (currAttempt.letterPos > 4) return;
@@ -36,7 +38,18 @@ function App() {
 			<nav>
 				<h3>Wordle</h3>
 			</nav>
-			<AppContext.Provider value={{ board, setBoard, currAttempt, setCurrAttempt, onSelectLetter, onDelete, onEnter }}>
+			<AppContext.Provider 
+				value={{
+					board,
+					setBoard,
+					currAttempt,
+					setCurrAttempt,
+					onSelectLetter,
+					onDelete,
+					onEnter,
+					myWord
+				}}
+			>
 				<div className='game'>
 					<Board />
 					<Keyboard />
