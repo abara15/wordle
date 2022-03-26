@@ -1,7 +1,7 @@
-import { createContext, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import './App.css';
 import { Board, Keyboard } from './components';
-import { boardDefault } from './constants/Words';
+import { boardDefault, generateGuessSet, generateWordSet } from './constants/Words';
 
 export const AppContext = createContext();
 
@@ -9,8 +9,19 @@ function App() {
 	// Initialize the board with its default state
     const [board, setBoard] = useState(boardDefault);
 	const [currAttempt, setCurrAttempt] = useState({attempt: 0, letterPos: 0});
+	const [wordSet, setWordSet] = useState(new Set());
+	const [guessSet, setGuessSet] = useState(new Set());
 
-	const myWord = "IRATE";
+	const myWord = "FALSE";
+
+	useEffect(() => {
+		generateWordSet().then((words) => {
+			setWordSet(words.wordSet);
+		});
+		generateGuessSet().then((guesses) => {
+			setGuessSet(guesses.guessSet);
+		});
+	}, [])
 
 	const onSelectLetter = (keyVal) => {
 		const newBoard = [...board];
@@ -30,7 +41,17 @@ function App() {
 	
 	const onEnter = () => {
 		if (currAttempt.letterPos !== 5) return;
-		setCurrAttempt({attempt: currAttempt.attempt + 1, letterPos: 0});
+
+		let currWord = "";
+		for (let i = 0; i < 5; i++) {
+			currWord += board[currAttempt.attempt][i];
+		}
+
+		if (wordSet.has(currWord.toLowerCase()) || guessSet.has(currWord.toLowerCase())) {
+			setCurrAttempt({attempt: currAttempt.attempt + 1, letterPos: 0});
+		} else {
+			alert("Word not found");
+		}
 	};
 
 	return (
