@@ -13,8 +13,8 @@ function Letter({ position, attemptVal }) {
 
     const letter = board[attemptVal][position];
     console.log(`The correct word is ${correctWord}`);
-    const correct = correctWord[position] === letter;
-    const almost = !correct && letter !== "" && correctWord.includes(letter);
+    const correct = correctWord.toUpperCase()[position] === letter;
+    const almost = !correct && letter !== "" && correctWord.toUpperCase().includes(letter);
 
     const letterState = currAttempt.attempt > attemptVal &&
                         (correct ? "correct" : almost ? "almost" : "error");

@@ -60,7 +60,7 @@ function App() {
 			alert("Word not found");
 		}
 
-		if (currWord === correctWord) {
+		if (currWord === correctWord.toUpperCase()) {
 			setGameOver({gameOver: true, guessedWord: true});
 			return;
 		}
