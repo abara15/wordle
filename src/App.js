@@ -11,6 +11,9 @@ function App() {
 	const [currAttempt, setCurrAttempt] = useState({attempt: 0, letterPos: 0});
 	const [wordSet, setWordSet] = useState(new Set());
 	const [guessSet, setGuessSet] = useState(new Set());
+	const [disabledLetters, setDisabledLetters] = useState([]);
+	const [almostLetters, setAlmostLetters] = useState([]);
+	const [correctLetters, setCorrectLetters] = useState([]);
 
 	const myWord = "FALSE";
 
@@ -52,6 +55,10 @@ function App() {
 		} else {
 			alert("Word not found");
 		}
+
+		if (currWord === myWord) {
+			alert("Game over! You win!");
+		}
 	};
 
 	return (
@@ -68,6 +75,12 @@ function App() {
 					onSelectLetter,
 					onDelete,
 					onEnter,
+					disabledLetters,
+					setDisabledLetters,
+					almostLetters,
+					setAlmostLetters,
+					correctLetters,
+					setCorrectLetters,
 					myWord
 				}}
 			>
