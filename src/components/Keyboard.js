@@ -3,7 +3,14 @@ import { AppContext } from '../App';
 import Key from './Key';
 
 function Keyboard() {
-    const { onSelectLetter, onEnter, onDelete, disabledLetters, almostLetters, correctLetters } = useContext(AppContext);
+    const {
+        onSelectLetter,
+        onEnter,
+        onDelete,
+        disabledLetters,
+        almostLetters,
+        correctLetters
+    } = useContext(AppContext);
 
     const l1_keys = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"];
     const l2_keys = ["A", "S", "D", "F", "G", "H", "J", "K", "L"];
