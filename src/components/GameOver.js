@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../App';
+import { IoMdRefresh } from "react-icons/io";
 
 function GameOver() {
     const { gameOver, currAttempt, correctWord } = useContext(AppContext);
@@ -14,6 +15,9 @@ function GameOver() {
                 }
             </h3>
             {gameOver.guessedWord && (<h3>You guessed in {currAttempt.attempt} attempt(s)</h3>)}
+            <button onClick={() => window.location.reload(false)}>
+                <IoMdRefresh className='refreshIcon' />
+            </button>
         </div>
     );
 }

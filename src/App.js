@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from 'react';
 import './App.css';
-import { Board, Keyboard, GameOver } from './components';
+import { Board, Keyboard, GameOver, Navbar } from './components';
 import { boardDefault, generateGuessSet, generateWordSet } from './constants/Words';
 
 export const AppContext = createContext();
@@ -22,12 +22,17 @@ function App() {
 
 	useEffect(() => {
 		generateWordSet().then((words) => {
-			setCorrectWord(words.gameWord);
+			setCorrectWord("makes");
+			// setCorrectWord(words.gameWord);
 			setWordSet(words.wordSet);
 		});
 		generateGuessSet().then((guesses) => {
 			setGuessSet(guesses.guessSet);
 		});
+
+		console.log(correctLetters);
+		console.log(almostLetters);
+		console.log(disabledLetters);
 	}, [])
 
 	const onSelectLetter = (keyVal) => {
@@ -72,9 +77,7 @@ function App() {
 
 	return (
 		<div className="App">
-			<nav>
-				<h3>Wordle</h3>
-			</nav>
+			<Navbar />
 			<AppContext.Provider 
 				value={{
 					board,

@@ -1,5 +1,7 @@
 import React, { useContext } from 'react'
 import { AppContext } from '../App';
+import { IoMdReturnLeft } from "react-icons/io";
+import { IoBackspaceSharp } from "react-icons/io5";
 
 function Key({ keyVal, bigKey, disabled, almost, correct }) {
     const {
@@ -32,13 +34,23 @@ function Key({ keyVal, bigKey, disabled, almost, correct }) {
         }
     }
 
+    const val = () => {
+        if (keyVal === "ENTER") {
+            return <IoMdReturnLeft />;
+        } else if (keyVal === "DELETE") {
+            return <IoBackspaceSharp />;
+        } else {
+            return keyVal
+        }
+    }
+
     return (
         <div
             className='key'
             id={bigKey ? "big" : keyColor()}
             onClick={selectLetter}
         >
-            {keyVal}
+            {val()}
         </div>
     );
 }

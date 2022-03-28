@@ -7,7 +7,9 @@ function Letter({ position, attemptVal }) {
         currAttempt,
         setDisabledLetters,
         setAlmostLetters,
+        almostLetters,
         setCorrectLetters,
+        correctLetters,
         correctWord
     } = useContext(AppContext);
 
@@ -22,10 +24,16 @@ function Letter({ position, attemptVal }) {
     useEffect(() => {
         if (letter !== "" && !correct && !almost) {
             setDisabledLetters((prev) => [...prev, letter]);
-        } else if (letter !== "" && !correct && almost) {
-            setAlmostLetters((prev) => [...prev, letter]);
-        } else if (letter !== "" && correct && !almost) {
+        } else if (letter !== "" && correct) {
+            if (almostLetters.includes(letter)) {
+                let arr = almostLetters.filter(x => x !== letter);
+                setAlmostLetters(arr);
+            }
             setCorrectLetters((prev) => [...prev, letter]);
+        } else if (letter !== "" && almost) {
+            if (!correctLetters.includes(letter)) {
+                setAlmostLetters((prev) => [...prev, letter]);
+            }
         }
     }, [currAttempt.attempt]);
 
