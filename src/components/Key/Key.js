@@ -1,7 +1,7 @@
-import React, { useContext } from 'react'
-import { AppContext } from '../App';
+import React, { useContext } from 'react';
 import { IoMdReturnLeft } from "react-icons/io";
 import { IoBackspaceSharp } from "react-icons/io5";
+import { AppContext } from '../../App';
 
 function Key({ keyVal, bigKey, disabled, almost, correct }) {
     const {

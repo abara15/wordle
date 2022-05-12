@@ -1,14 +1,17 @@
 import React from 'react';
 import { AppBar, Box, IconButton, Toolbar, Typography } from '@mui/material';
-import { IoMdInformationCircleOutline, IoMdMenu, IoMdRefresh, IoIosStats } from "react-icons/io";
+import { IoMdInformationCircleOutline, IoMdRefresh } from "react-icons/io";
+import { IoCog } from "react-icons/io5";
+
+import { StatisticsDialog } from "..";
 import "./Navbar.scss";
 
 function Navbar() {    
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position='fixed'>
+            <AppBar position='sticky' elevation={0}>
                 <Toolbar className='app__navbar'>
-                    <div>
+                    <div className='app__navbar-icons'>
                         <IconButton
                             size="large"
                             edge="start"
@@ -26,22 +29,16 @@ function Navbar() {
                             <IoMdInformationCircleOutline />
                         </IconButton>
                     </div>
-                    <Typography>Wordle</Typography>
-                    <div>
-                        <IconButton
-                            size="large"
-                            color="inherit"
-                            aria-label="statistics"
-                        >
-                            <IoIosStats />
-                        </IconButton>
+                    <Typography className='app__navbar-title'>Wordle</Typography>
+                    <div className='app__navbar-icons'>
+                        <StatisticsDialog />
                         <IconButton
                             size="large"
                             edge="end"
                             color="inherit"
-                            aria-label="menu"
+                            aria-label="settings"
                         >
-                            <IoMdMenu />
+                            <IoCog />
                         </IconButton>
                     </div>
                 </Toolbar>

@@ -2,7 +2,7 @@
 
 .App {
 	text-align: center;
-	background-color: #121212;
+	background-color: #111111;
 	width: 100vw;
 	height: 100vh;
 	/* display: flex; */
@@ -49,8 +49,8 @@ nav h1 {
 	margin: 0;
 	font-family: 'Source Serif 4', sans-serif;
 	font-weight: 900;
-	color: white;
 	font-size: 45px;
+	color: white;
 }
 
 .game {
@@ -58,6 +58,7 @@ nav h1 {
 	max-width: 500px;
 	height: calc(100vh - 120px);
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
 	padding-top: 50px;
 	flex-direction: column;
@@ -66,7 +67,6 @@ nav h1 {
   
 .board {
 	max-width: 450px;
-	height: 550px;
 	display: flex;
 	flex-direction: column;
 }
@@ -74,7 +74,6 @@ nav h1 {
 .row {
 	display: flex;
 	flex-direction: row;
-	margin: 5px;
 }
   
 .letter {
@@ -82,7 +81,9 @@ nav h1 {
 	width: 50px;
 	height: 50px;
 	border: 2px solid #3a3a3c;
-	margin: 5px;
+	border-radius: 10px;
+	margin: 3px;
+	padding: 3px;
 	display: grid;
 	place-items: center;
 	font-size: 2rem;
@@ -90,6 +91,7 @@ nav h1 {
 	color: white;
 	font-family: "Helvetica Nue", Arial, sans-serif;
 	font-weight: bold;
+	text-shadow: 1px 1px 0px #CECECE;
 }
   
 #correct {
@@ -103,13 +105,13 @@ nav h1 {
 }
   
 #error {
-	background-color: #3a393c;
-	border-color: #3a393c;
+	background-color: #334254;
+	border-color: #334254;
 }
   
 .keyboard {
 	width: 100%;
-	margin: 10px auto 0 auto;
+	margin: 0 auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -151,7 +153,7 @@ nav h1 {
 	flex: 1;
 	background-color: grey;
 	color: white;
-	height: 58px;
+	height: 50px;
     padding: 0;
 	border: 2px solid grey;
 	transition: 0.2s all ease-in-out;

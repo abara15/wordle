@@ -1,11 +1,11 @@
 import { createContext, useEffect, useState } from 'react';
 import './App.css';
-import { Board, Keyboard, GameOver, Navbar, Modal } from './components';
+import { Board, Keyboard, GameOver, Navbar } from './components';
 import { boardDefault, generateGuessSet, generateWordSet } from './constants/Words';
 
 export const AppContext = createContext();
 
-function App() {
+export default function App() {
 	// Initialize the board with its default state
     const [board, setBoard] = useState(boardDefault);
 	const [currAttempt, setCurrAttempt] = useState({attempt: 0, letterPos: 0});
@@ -47,6 +47,7 @@ function App() {
 	};
 	
 	const onEnter = () => {
+		console.log(correctWord);
 		if (currAttempt.letterPos !== 5) return;
 
 		let currWord = "";
@@ -94,13 +95,11 @@ function App() {
 				}}
 			>
 				<div className='game'>
-					<Modal />
+					{gameOver.gameOver ? <GameOver /> : ""}
 					<Board />
-					{gameOver.gameOver ? <GameOver /> : <Keyboard />}
+					<Keyboard />
 				</div>
 			</AppContext.Provider>
 		</div>
 	);
 }
-
-export default App;
