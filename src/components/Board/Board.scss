@@ -1,0 +1,10 @@
+.board {
+	max-width: 450px;
+	display: flex;
+	flex-direction: column;
+}
+  
+.row {
+	display: flex;
+	flex-direction: row;
+}

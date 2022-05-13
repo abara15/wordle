@@ -1,5 +1,6 @@
 import React from 'react'
 import { Letter } from '..';
+import './Board.scss';
 
 function Board() {
     

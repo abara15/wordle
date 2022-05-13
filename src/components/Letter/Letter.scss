@@ -1,0 +1,32 @@
+.letter {
+	flex: 33%;
+	width: 50px;
+	height: 50px;
+	border: 1px solid #ffffff;
+	border-radius: 9px;
+	margin: 3px;
+	padding: 3px;
+	display: grid;
+	place-items: center;
+	font-size: 2rem;
+	font-weight: bolder;
+	color: white;
+	font-family: "Helvetica Nue", Arial, sans-serif;
+	font-weight: bold;
+	text-shadow: 1px 1px 0px #CECECE;
+}
+  
+#correct {
+	background-color: #528d4e;
+	border-color: #528d4e;
+}
+  
+#almost {
+	background-color: #b49f39;
+	border-color: #b49f39;
+}
+  
+#error {
+	background-color: #334254;
+	border-color: #334254;
+}
