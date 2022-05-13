@@ -1,6 +1,5 @@
-import { Grid, IconButton, Stack, Typography } from "@mui/material";
-import { BiBarChartAlt2, BiCog, BiMenuAltLeft } from 'react-icons/bi';
-import Info from "../Info/Info";
+import { Grid, Stack } from "@mui/material";
+import { Info, Menu, Settings, Statistics } from "..";
 import './Header.scss';
 
 export default function Header() {
@@ -19,9 +18,7 @@ export default function Header() {
                     alignItems="center"
                     spacing={0.5}
                 >
-                    <IconButton aria-label="statistics button">
-                        <BiMenuAltLeft color="#ffffff" />
-                    </IconButton>
+                    <Menu />
                     <Info />
                 </Stack>
             </Grid>
@@ -42,12 +39,8 @@ export default function Header() {
                     alignItems="center"
                     spacing={0.5}
                 >
-                    <IconButton aria-label="statistics button">
-                        <BiBarChartAlt2 color="#ffffff" />
-                    </IconButton>
-                    <IconButton aria-label="settings button">
-                        <BiCog color="#ffffff" />
-                    </IconButton>
+                    <Statistics />
+                    <Settings />
                 </Stack>
             </Grid>
         </Grid>

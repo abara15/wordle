@@ -24,7 +24,7 @@ export default function Info() {
         <>
             <IconButton
                 onClick={handleClickOpen}
-                aria-label="statistics button"
+                aria-label="info button"
             >
                 <BsQuestionCircle color="#ffffff" />
             </IconButton>
