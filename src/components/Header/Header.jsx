@@ -20,7 +20,7 @@ export default function Header() {
                     spacing={0.5}
                 >
                     <IconButton aria-label="statistics button">
-                        <BiMenuAltLeft color="#ffffff" />
+                        <BiMenuAltLeft color="#ffffff" fontSize={35} />
                     </IconButton>
                     <Info />
                 </Stack>
@@ -30,10 +30,9 @@ export default function Header() {
                     direction="column"
                     justifyContent="center"
                     alignItems="center"
-                    spacing={0}
+                    spacing={0.5}
                 >
-                    <Typography className="header-title">Wordle</Typography>
-                    <Typography className="header-tag">@abara15</Typography>
+                    <span className="header-title">Wordle</span>
                 </Stack>
             </Grid>
             <Grid item>
@@ -44,10 +43,10 @@ export default function Header() {
                     spacing={0.5}
                 >
                     <IconButton aria-label="statistics button">
-                        <BiBarChartAlt2 color="#ffffff" />
+                        <BiBarChartAlt2 color="#ffffff" fontSize={35} />
                     </IconButton>
                     <IconButton aria-label="settings button">
-                        <BiCog color="#ffffff" />
+                        <BiCog color="#ffffff" fontSize={35} />
                     </IconButton>
                 </Stack>
             </Grid>
