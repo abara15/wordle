@@ -15,3 +15,15 @@
         border-radius: 0;
     }
 }
+
+.game {
+	width: 100%;
+	max-width: 500px;
+	height: calc(100vh - 120px);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding-top: 50px;
+	flex-direction: column;
+	margin: 0 auto;
+}

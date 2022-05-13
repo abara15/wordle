@@ -82,15 +82,7 @@ export default function Container() {
     return (
         <div className='app-container'>
             <Header />
-            <div
-                style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    width: '100%'
-                }}
-            >
+            <div className='game'>
                 <Board />
                 <br />
                 <Keyboard onSelectLetter={onSelectLetter} onDelete={onDelete} onEnter={onEnter} />
