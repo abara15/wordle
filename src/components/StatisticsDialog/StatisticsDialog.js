@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, IconButton, Slide, Stack, Typography } from '@mui/material';
+import { Button, Dialog, DialogActions, DialogContent, DialogTitle, IconButton, Slide, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
 import { IoIosStats } from "react-icons/io";
 import { IoClose, IoShareSocial } from "react-icons/io5";
 import "./StatisticsDialog.scss"
@@ -44,42 +44,34 @@ function StatisticsDialog() {
                     </DialogActions>
                 </DialogTitle>
                 <DialogContent>
-                    <DialogContentText>
-                        <Stack
-                            direction={{ xs: 'column', sm: 'row' }}
-                            justifyContent="center"
-                            alignItems="center"
-                            spacing={2}
-                        >
-                            <Stack
-                                direction="column"
-                                justifyContent="center"
-                                alignItems="center"
-                                spacing={0.5}
-                            >
-                                <p className='app__statistics_stat'>0</p>
-                                <p className='app__statistics_tag'>Played</p>
-                            </Stack>
-                            <Stack
-                                direction="column"
-                                justifyContent="center"
-                                alignItems="center"
-                                spacing={0.5}
-                            >
-                                <p className='app__statistics_stat'>0</p>
-                                <p className='app__statistics_tag'>Win %</p>
-                            </Stack>
-                            <Stack
-                                direction="column"
-                                justifyContent="center"
-                                alignItems="center"
-                                spacing={0.5}
-                            >
-                                <p className='app__statistics_stat'>0</p>
-                                <p className='app__statistics_tag'>Streak</p>
-                            </Stack>
-                        </Stack>
-                    </DialogContentText>
+                    <TableContainer>
+                        <Table aria-label="statistics-table">
+                            <TableHead>
+                                <TableRow>
+                                    <TableCell align="center">
+                                        <strong>0</strong>
+                                    </TableCell>
+                                    <TableCell align="center">
+                                        <strong>0</strong>
+                                    </TableCell>
+                                    <TableCell align="center">
+                                        <strong>0</strong>
+                                    </TableCell>
+                                    <TableCell align="center">
+                                        <strong>0</strong>
+                                    </TableCell>
+                                </TableRow>
+                            </TableHead>
+                            <TableBody>
+                                <TableRow>
+                                    <TableCell align="center">Played</TableCell>
+                                    <TableCell align="center">Win %</TableCell>
+                                    <TableCell align="center">Current Streak</TableCell>
+                                    <TableCell align="center">Max Streak</TableCell>
+                                </TableRow>
+                            </TableBody>
+                        </Table>
+                    </TableContainer>
                 </DialogContent>
                 <DialogActions>
                     <Button
