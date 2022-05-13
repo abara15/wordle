@@ -20,7 +20,7 @@ export default function Header() {
                     spacing={0.5}
                 >
                     <IconButton aria-label="statistics button">
-                        <BiMenuAltLeft color="#ffffff" fontSize={35} />
+                        <BiMenuAltLeft color="#ffffff" />
                     </IconButton>
                     <Info />
                 </Stack>
@@ -43,10 +43,10 @@ export default function Header() {
                     spacing={0.5}
                 >
                     <IconButton aria-label="statistics button">
-                        <BiBarChartAlt2 color="#ffffff" fontSize={35} />
+                        <BiBarChartAlt2 color="#ffffff" />
                     </IconButton>
                     <IconButton aria-label="settings button">
-                        <BiCog color="#ffffff" fontSize={35} />
+                        <BiCog color="#ffffff" />
                     </IconButton>
                 </Stack>
             </Grid>

@@ -42,7 +42,7 @@ export default function Info() {
                             aria-label='close'
                             sx={{ position: 'absolute', right: 10 }}
                         >
-                            <BsX color='#ffffff' fontSize={35} />
+                            <BsX color='#ffffff' />
                         </IconButton>
                     </Toolbar>
                 </AppBar>
