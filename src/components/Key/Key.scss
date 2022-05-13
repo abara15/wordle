@@ -1,0 +1,41 @@
+.key {
+	font-family: "Helvetica Nue", Arial, sans-serif;
+	font-weight: bold;
+	font-size: 1em;
+	margin: 0 3px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	border-radius: 4px;
+	cursor: pointer;
+	flex: 1;
+	color: white;
+	height: 50px;
+    padding: 0;
+	border: 1px solid white;
+	transition: 0.2s all ease-in-out;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.key:hover {
+	background-color: rgba(130, 130, 130, 0.3);
+}
+  
+#big {
+	border: 1px solid white;
+}
+
+#disabled {
+	color: #b0b0b0;
+	border-color: #b0b0b0;
+}
+
+#disabled:hover {
+    background-color: transparent;
+    cursor: default;
+}

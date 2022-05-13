@@ -1,14 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { IoMdReturnLeft } from "react-icons/io";
 import { IoBackspaceSharp } from "react-icons/io5";
-import { AppContext } from '../../App';
+import './Key.scss';
 
-function Key({ keyVal, bigKey, disabled, almost, correct }) {
-    const {
-        onSelectLetter,
-        onDelete,
-        onEnter
-    } = useContext(AppContext);
+function Key({ keyVal, bigKey, disabled, almost, correct, onSelectLetter, onDelete, onEnter }) {
 
     const selectLetter = () => {
         switch (keyVal) {
