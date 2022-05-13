@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box; /* not completely needed, yet useful */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: url('./assets/images/background.jpeg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.App {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
