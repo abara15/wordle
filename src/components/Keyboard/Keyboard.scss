@@ -1,0 +1,36 @@
+.keyboard {
+	width: 50%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	@media screen and (max-width: 480px) {
+        width: 100%;
+    }
+}
+  
+.line1 {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin: 0 auto 8px;
+}
+
+.line2 {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin: 0 auto 8px;
+}
+
+.line3 {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin: 0 auto 8px;
+}

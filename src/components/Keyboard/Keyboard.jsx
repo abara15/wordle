@@ -1,16 +1,10 @@
 import React, { useCallback, useContext, useEffect } from 'react'
 import { Key } from '..';
-import { AppContext } from '../../App';
+import { Context } from '../../context/Store';
+import './Keyboard.scss';
 
-function Keyboard() {
-    const {
-        onSelectLetter,
-        onEnter,
-        onDelete,
-        disabledLetters,
-        almostLetters,
-        correctLetters
-    } = useContext(AppContext);
+function Keyboard({ onSelectLetter, onDelete, onEnter }) {
+    const [state, setState] = useContext(Context);
 
     const l1_keys = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"];
     const l2_keys = ["A", "S", "D", "F", "G", "H", "J", "K", "L"];
@@ -57,33 +51,45 @@ function Keyboard() {
     return (
         <div className='keyboard' onKeyDown={handleKeyboard}>
             <div className='line1'>
-                {l1_keys.map((key) => (
+                {l1_keys.map((key, index) => (
                     <Key
+                        key={index}
                         keyVal={key}
-                        disabled={disabledLetters.includes(key)}
-                        almost={almostLetters.includes(key)}
-                        correct={correctLetters.includes(key)}
+                        disabled={state.disabledLetters.includes(key)}
+                        almost={state.almostLetters.includes(key)}
+                        correct={state.correctLetters.includes(key)}
+                        onSelectLetter={onSelectLetter}
+                        onDelete={onDelete}
+                        onEnter={onEnter}
                     />
                 ))}
             </div>
             <div className='line2'>
-                {l2_keys.map((key) => (
+                {l2_keys.map((key, index) => (
                     <Key
+                        key={index}
                         keyVal={key}
-                        disabled={disabledLetters.includes(key)}
-                        almost={almostLetters.includes(key)}
-                        correct={correctLetters.includes(key)}
+                        disabled={state.disabledLetters.includes(key)}
+                        almost={state.almostLetters.includes(key)}
+                        correct={state.correctLetters.includes(key)}
+                        onSelectLetter={onSelectLetter}
+                        onDelete={onDelete}
+                        onEnter={onEnter}
                     />
                 ))}
             </div>
             <div className='line3'>
                 <Key keyVal="ENTER" bigKey={true} />
-                {l3_keys.map((key) => (
+                {l3_keys.map((key, index) => (
                     <Key
+                        key={index}
                         keyVal={key}
-                        disabled={disabledLetters.includes(key)}
-                        almost={almostLetters.includes(key)}
-                        correct={correctLetters.includes(key)}
+                        disabled={state.disabledLetters.includes(key)}
+                        almost={state.almostLetters.includes(key)}
+                        correct={state.correctLetters.includes(key)}
+                        onSelectLetter={onSelectLetter}
+                        onDelete={onDelete}
+                        onEnter={onEnter}
                     />
                 ))}
                 <Key keyVal="DELETE" bigKey={true} />
