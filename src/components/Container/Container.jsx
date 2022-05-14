@@ -37,7 +37,6 @@ export default function Container() {
     };
 
     const onEnter = () => {
-        console.log(state.correctWord);
         if (state.currAttempt.letterPos !== 5) return;
 
         let currWord = "";

@@ -21,9 +21,9 @@
 	max-width: 500px;
 	height: calc(100vh - 120px);
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
-	padding-top: 50px;
+	padding: 10px 0;
 	flex-direction: column;
 	margin: 0 auto;
 }
