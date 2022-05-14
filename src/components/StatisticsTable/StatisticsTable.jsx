@@ -8,19 +8,19 @@ export default function StatisticsTable() {
             <Stack direction="row" justifyContent="center" alignItems="center" spacing={3} className="stats-table">
                 <Stack direction="column" justifyContent="center" alignItems="center" spacing={0.5}>
                     <span className="stats-table-stat">0</span>
-                    <span class="stats-table-tag">Played</span>
+                    <span className="stats-table-tag">Played</span>
                 </Stack>
                 <Stack direction="column" justifyContent="center" alignItems="center" spacing={0.5}>
                     <span className="stats-table-stat">0</span>
-                    <span class="stats-table-tag">Win %</span>
+                    <span className="stats-table-tag">Win %</span>
                 </Stack>
                 <Stack direction="column" justifyContent="center" alignItems="center" spacing={0.5}>
                     <span className="stats-table-stat">0</span>
-                    <span class="stats-table-tag">Current Streak</span>
+                    <span className="stats-table-tag">Current Streak</span>
                 </Stack>
                 <Stack direction="column" justifyContent="center" alignItems="center" spacing={0.5}>
                     <span className="stats-table-stat">0</span>
-                    <span class="stats-table-tag">Max Streak</span>
+                    <span className="stats-table-tag">Max Streak</span>
                 </Stack>
             </Stack>
         </>
