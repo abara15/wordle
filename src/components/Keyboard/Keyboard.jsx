@@ -11,6 +11,9 @@ function Keyboard({ onSelectLetter, onDelete, onEnter }) {
     const l3_keys = ["Z", "X", "C", "V", "B", "N", "M"];
 
     const handleKeyboard = useCallback((event) => {
+        if (state.gameOver.gameOver) return;
+        console.log(state);
+
         switch (event.key) {
             case "Enter":
                 onEnter();
