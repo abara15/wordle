@@ -1,4 +1,4 @@
-import { Stack, Table, TableCell, TableHead, TableRow, Typography } from "@mui/material";
+import { Stack } from "@mui/material";
 import './StatisticsTable.scss';
 
 export default function StatisticsTable() {

@@ -1,5 +1,4 @@
-import PropTypes from 'prop-types';
-import { Box, Button, Grid, Stack, Typography } from "@mui/material";
+import { Grid, Stack, Typography } from "@mui/material";
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
 import { styled } from '@mui/material/styles';
 import './GuessDistribution.scss';

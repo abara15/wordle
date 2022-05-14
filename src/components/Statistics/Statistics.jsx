@@ -1,12 +1,18 @@
 import { forwardRef, useState } from "react";
-import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, IconButton, Slide, Stack } from "@mui/material";
+import { Button, Dialog, DialogActions, DialogContent, IconButton, Slide } from "@mui/material";
 import { BiBarChartAlt2 } from 'react-icons/bi';
-import { BsShare, BsX } from 'react-icons/bs';
+import { BsShare } from 'react-icons/bs';
 import { GuessDistribution, StatisticsTable } from "..";
 
 const Transition = forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
 });
+
+// {/* <DialogActions>
+//                     <IconButton edge='end' onClick={handleClose}>
+//                         <BsX />
+//                     </IconButton>
+//                 </DialogActions> */}
 
 export default function Statistics() {
 
@@ -34,11 +40,6 @@ export default function Statistics() {
                 keepMounted
                 onClose={handleClose}
             >
-                {/* <DialogActions>
-                    <IconButton edge='end' onClick={handleClose}>
-                        <BsX />
-                    </IconButton>
-                </DialogActions> */}
                 <DialogContent>
                     <StatisticsTable />
                     <GuessDistribution />

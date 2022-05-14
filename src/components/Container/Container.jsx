@@ -1,4 +1,3 @@
-import { Stack } from '@mui/material';
 import { useContext } from 'react';
 import { Board, Header, Keyboard } from '..';
 import { Context } from '../../context/Store';
