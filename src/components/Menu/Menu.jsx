@@ -10,14 +10,17 @@ export default function Menu() {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) return;
         setOpen(toggle);
     };
+
+    // Change color to #ffffff when you put content in menu
     
     return (
         <>
             <IconButton
                 onClick={toggleDrawer(true)}
                 aria-label="statistics button"
+                disabled
             >
-                <BiMenuAltLeft color="#ffffff" />
+                <BiMenuAltLeft color="#e1e1e1" />
             </IconButton>
             <Drawer
                 anchor='left'
